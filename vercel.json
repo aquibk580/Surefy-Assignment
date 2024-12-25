@@ -14,13 +14,9 @@
     {
       "src": "/api/(.*)",
       "dest": "/app.js"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/build/index.html"
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/frontend/build/index.html" }
   ]
 }
