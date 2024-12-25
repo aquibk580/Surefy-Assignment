@@ -41,7 +41,7 @@ function addHotel(req, res) {
             .save()
             .then(async (savedHotel) => {
               // Generate QR Code using the saved hotel's _id
-              const qrCodeUrl = `${process.env.API_URL}/${savedHotel._id}`;
+              const qrCodeUrl = `${process.env.API_URL}/hotels/${savedHotel._id}`;
               QRCode.toDataURL(qrCodeUrl, async (err, qrCodeData) => {
                 if (err) {
                   return res.status(500).json({
